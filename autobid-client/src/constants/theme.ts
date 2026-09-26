@@ -26,10 +26,26 @@ export const Colors = {
 
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
 
+/**
+ * Geist is loaded in `src/app/_layout.tsx` via `useFonts`. Each weight is registered as its
+ * own font family (the `@expo-google-fonts/geist` files are static cuts), so select a weight
+ * by family name instead of `fontWeight`.
+ */
+export const Geist = {
+  thin: 'Geist_100Thin',
+  extraLight: 'Geist_200ExtraLight',
+  light: 'Geist_300Light',
+  regular: 'Geist_400Regular',
+  medium: 'Geist_500Medium',
+  semiBold: 'Geist_600SemiBold',
+  bold: 'Geist_700Bold',
+  extraBold: 'Geist_800ExtraBold',
+  black: 'Geist_900Black',
+} as const;
+
 export const Fonts = Platform.select({
   ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
+    sans: Geist.regular,
     /** iOS `UIFontDescriptorSystemDesignSerif` */
     serif: 'ui-serif',
     /** iOS `UIFontDescriptorSystemDesignRounded` */
@@ -38,13 +54,13 @@ export const Fonts = Platform.select({
     mono: 'ui-monospace',
   },
   default: {
-    sans: 'normal',
+    sans: Geist.regular,
     serif: 'serif',
     rounded: 'normal',
     mono: 'monospace',
   },
   web: {
-    sans: 'var(--font-display)',
+    sans: Geist.regular,
     serif: 'var(--font-serif)',
     rounded: 'var(--font-rounded)',
     mono: 'var(--font-mono)',
