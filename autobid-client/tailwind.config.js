@@ -3,19 +3,34 @@ module.exports = {
 	// NOTE: Update this to include the paths to all files that contain Nativewind classes.
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	presets: [require("nativewind/preset")],
+	darkMode: 'class',
 	theme: {
 		extend: {
+			// All colors reference CSS variables defined in global.css
+			// When .dark class is applied, CSS variables automatically switch
 			colors: {
-				bg: "#0E1319",
-				surface: "#151C24",
-				primary: "#E8E4DC",
-				secondary: "#8A94A0",
-				accent: "#E8703A",
-				"accent-2": "#D9A441",
-				"accent-3": "#4E9B8F",
-				success: "#5FA860",
-				error: "#D9544A",
-				warning: "#E0A93E",
+				// Backgrounds
+				bg: "var(--color-bg)",
+				surface: "var(--color-surface)",
+				background: "var(--color-background)",
+				backgroundElement: "var(--color-backgroundElement)",
+				backgroundSelected: "var(--color-backgroundSelected)",
+				
+				// Text
+				text: "var(--color-text)",
+				textSecondary: "var(--color-textSecondary)",
+				primary: "var(--color-primary)",
+				secondary: "var(--color-secondary)",
+				
+				// Accents
+				accent: "var(--color-accent)",
+				"accent-2": "var(--color-accent-2)",
+				"accent-3": "var(--color-accent-3)",
+				
+				// Semantic
+				success: "var(--color-success)",
+				error: "var(--color-error)",
+				warning: "var(--color-warning)",
 			},
 		},
 	},
