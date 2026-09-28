@@ -11,54 +11,54 @@ import { Platform } from 'react-native';
 // Update these, then copy to global.css
 // ============================================
 export const Colors = {
-  light: {
-    // Backgrounds
-    bg: '#ffffff',
-    surface: '#F0F0F3',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    
-    // Text
-    text: '#000000',
-    textSecondary: '#60646C',
-    primary: '#0E1319',
-    secondary: '#60646C',
-    
-    // Accents
-    accent: '#E8703A',
-    'accent-2': '#D9A441',
-    'accent-3': '#4E9B8F',
-    
-    // Semantic
-    success: '#5FA860',
-    error: '#D9544A',
-    warning: '#E0A93E',
-  },
-  dark: {
-    // Backgrounds
-    bg: '#0E1319',
-    surface: '#151C24',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    
-    // Text
-    text: '#ffffff',
-    textSecondary: '#B0B4BA',
-    primary: '#E8E4DC',
-    secondary: '#8A94A0',
-    
-    // Accents (same as light - brand colors don't change)
-    accent: '#E8703A',
-    'accent-2': '#D9A441',
-    'accent-3': '#4E9B8F',
-    
-    // Semantic (same as light - brand colors don't change)
-    success: '#5FA860',
-    error: '#D9544A',
-    warning: '#E0A93E',
-  },
+	light: {
+		// Backgrounds
+		bg: "#ffffff",
+		surface: "#F0F0F3",
+		background: "#ffffff",
+		backgroundElement: "#F0F0F3",
+		backgroundSelected: "#E0E1E6",
+
+		// Text
+		text: "#000000",
+		textSecondary: "#60646C",
+		primary: "#0E1319",
+		secondary: "#60646C",
+
+		// Accents
+		accent: "#E8703A",
+		"accent-2": "#D9A441",
+		"accent-3": "#4E9B8F",
+
+		// Semantic
+		success: "#5FA860",
+		error: "#D9544A",
+		warning: "#E0A93E",
+	},
+	dark: {
+		// Backgrounds
+		bg: "#0E1319",
+		surface: "#151C24",
+		background: "#0E1319",
+		backgroundElement: "#212225",
+		backgroundSelected: "#2E3135",
+
+		// Text
+		text: "#ffffff",
+		textSecondary: "#B0B4BA",
+		primary: "#E8E4DC",
+		secondary: "#8A94A0",
+
+		// Accents (same as light - brand colors don't change)
+		accent: "#E8703A",
+		"accent-2": "#D9A441",
+		"accent-3": "#4E9B8F",
+
+		// Semantic (same as light - brand colors don't change)
+		success: "#5FA860",
+		error: "#D9544A",
+		warning: "#E0A93E",
+	},
 } as const;
 
 export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
