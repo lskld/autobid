@@ -6,6 +6,10 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			// Font family - references CSS variable
+			fontFamily: {
+				sans: ['var(--font-sans)'],
+			},
 			// All colors reference CSS variables defined in global.css
 			// When .dark class is applied, CSS variables automatically switch
 			colors: {
