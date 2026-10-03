@@ -37,6 +37,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "364d6bbb-f5f6-4613-a15d-e9aaf8af2e44"
+      }
+    },
+    "owner": "lskld-dev"
   }
 }
