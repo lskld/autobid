@@ -23,6 +23,7 @@ export default function Login() {
 					label={"Password"}
 					value={password}
 					onChangeText={(password) => setPassword(password)}
+					secureTextEntry
 				/>
 			</View>
 			<Link style={styles.loginBtn} href="/(app)/dashboard" push asChild>

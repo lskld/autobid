@@ -23,6 +23,7 @@ export default function Register() {
 					label={"Password"}
 					value={password}
 					onChangeText={(password) => setPassword(password)}
+					secureTextEntry
 				/>
 			</View>
 			<Link style={styles.registerBtn} href="/(app)/dashboard" push asChild>
