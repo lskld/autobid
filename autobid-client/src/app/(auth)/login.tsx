@@ -1,10 +1,16 @@
+import { Link } from "expo-router";
 import { View } from "react-native";
-import { Text } from "react-native-paper";
+import { Button } from "react-native-paper";
 
 export default function Login() {
-    return (
-        <View>
-            <Text>Login</Text>
-        </View>
-    )
+	return (
+		<View>
+			<Link href="/(auth)/register" push asChild>
+				<Button>Register</Button>
+			</Link>
+			<Link href="/(app)/dashboard" push asChild>
+				<Button>Login User</Button>
+			</Link>
+		</View>
+	);
 }

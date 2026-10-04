@@ -1,3 +1,4 @@
+import { Redirect } from "expo-router";
 import { View, StyleSheet } from "react-native";
 import { Text } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -5,9 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Index() {
 	return (
 		<SafeAreaView style={styles.container}>
-			<View>
-				<Text>Welcome to Autobid</Text>
-			</View>
+			<Redirect href={"/(auth)/login"}></Redirect>
 		</SafeAreaView>
 	);
 }
