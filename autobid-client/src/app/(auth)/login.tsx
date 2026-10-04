@@ -17,6 +17,7 @@ export default function Login() {
 					label={"Email"}
 					value={email}
 					onChangeText={(email) => setEmail(email)}
+					theme={{ roundness: 30 }}
 				/>
 				<TextInput
 					mode="outlined"
@@ -24,6 +25,7 @@ export default function Login() {
 					value={password}
 					onChangeText={(password) => setPassword(password)}
 					secureTextEntry
+					theme={{ roundness: 30 }}
 				/>
 			</View>
 			<Link style={styles.loginBtn} href="/(app)/dashboard" push asChild>

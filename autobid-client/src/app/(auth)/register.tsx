@@ -17,6 +17,7 @@ export default function Register() {
 					label={"Email"}
 					value={email}
 					onChangeText={(email) => setEmail(email)}
+					theme={{ roundness: 30 }}
 				/>
 				<TextInput
 					mode="outlined"
@@ -24,6 +25,7 @@ export default function Register() {
 					value={password}
 					onChangeText={(password) => setPassword(password)}
 					secureTextEntry
+					theme={{ roundness: 30 }}
 				/>
 			</View>
 			<Link style={styles.registerBtn} href="/(app)/dashboard" push asChild>
