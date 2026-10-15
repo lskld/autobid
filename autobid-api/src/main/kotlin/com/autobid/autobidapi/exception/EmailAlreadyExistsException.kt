@@ -1,4 +1,4 @@
 package com.autobid.autobidapi.exception
 
-class EmailAlreadyExistsException {
-}
+class EmailAlreadyExistsException(email: String) :
+    RuntimeException("Email $email already exists")
