@@ -37,7 +37,12 @@ class UserService(
     @Transactional(readOnly = true)
     fun getUserById(id: Long): UserResponse {
         return userRepository.findById(id)
-            .orElseThrow{ UserNotFoundException(id) }
+            .orElseThrow{ UserNotFoundException() }
             .toResponse()
+    }
+
+    @Transactional(readOnly = true)
+    fun getUserByEmail(email: String): UserResponse? {
+        return userRepository.findByEmail(email)?.toResponse()
     }
 }
