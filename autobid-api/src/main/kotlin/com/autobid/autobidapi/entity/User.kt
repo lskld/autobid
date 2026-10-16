@@ -7,11 +7,14 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.Table
 import org.hibernate.annotations.CreationTimestamp
+import org.springframework.security.core.GrantedAuthority
+import org.springframework.security.core.authority.SimpleGrantedAuthority
+import org.springframework.security.core.userdetails.UserDetails
 import java.time.Instant
 
 @Entity
 @Table(name = "users")
-class User(
+class User (
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     var id: Long? = null,
@@ -27,4 +30,15 @@ class User(
 
     @CreationTimestamp
     var createdAt: Instant? = null
-)
+) : UserDetails {
+    override fun getAuthorities(): Collection<GrantedAuthority> =
+        listOf(SimpleGrantedAuthority("ROLE_USER"))
+
+    override fun getPassword(): String = passwordHash
+    override fun getUsername(): String = email
+
+    override fun isAccountNonExpired(): Boolean = true
+    override fun isAccountNonLocked(): Boolean = true
+    override fun isCredentialsNonExpired(): Boolean = true
+    override fun isEnabled(): Boolean = true
+}
