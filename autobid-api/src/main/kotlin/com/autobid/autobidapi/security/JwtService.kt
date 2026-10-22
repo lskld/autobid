@@ -13,7 +13,7 @@ import javax.crypto.SecretKey
 @Service
 class JwtService(
     @Value("\${jwt.secret}") secret: String,
-    @Value("\${jwt.expiration-ms") expirationMs: Long
+    @Value("\${jwt.expiration-ms}") expirationMs: Long
 ) {
     private val key: SecretKey = Keys.hmacShaKeyFor(secret.toByteArray())
     private val expiration = Duration.ofMillis(expirationMs)
